@@ -1,4 +1,5 @@
 import React from "react";
+// * importing all the required react icons because it has been used in below categories varible that has been exported.
 
 import { AiFillHome, AiOutlineFlag } from "react-icons/ai";
 import { MdLocalFireDepartment, MdLiveTv } from "react-icons/md";
@@ -9,6 +10,8 @@ import { ImNewspaper } from "react-icons/im";
 import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
+
+//  ?  Categoris array with object containing name, icon and type.
 
 export const categories = [
     { name: "New", icon: <AiFillHome />, type: "home" },
