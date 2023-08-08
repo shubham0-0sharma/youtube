@@ -7,3 +7,4 @@ export { default as LeftNavMenuItem } from "./LeftNavMenuItem";
 export { default as SearchResults } from "./SearchResults";
 export { default as SearchResultVideoCard } from "./SearchResultVideoCard";
 export { default as VideoCard } from "./VideoCard";
+export { default as SuggestionVideoCard } from "./SuggestionVideoCard";
