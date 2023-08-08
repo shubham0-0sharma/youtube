@@ -17,6 +17,10 @@ const VideoDetails = () => {
     useEffect(() => {
         fetchRelatedVideos();
         fetchVideoDetails();
+        return () => {
+            setRelatedVideos([]);
+            setVideo({});
+        };
     }, [id]);
 
     const fetchVideoDetails = () => {

@@ -24,6 +24,7 @@ export const AppContext = ({ children }) => {
             setSearchResults(contents);
             setLoading(false);
         });
+        return () => setSearchResults([]);
     };
     return (
         <Context.Provider

@@ -17,16 +17,18 @@ const VideoCard = ({ video }) => {
                 <VideoLength time={video?.lengthSeconds} />
             </div>
             <div className="flex text-white mt-3">
-                <div className="h-9 w-9 overflow-hidden rounded-full">
-                    <img
-                        className="h-full w-full object-cover"
-                        src={video?.author?.avatar[0]?.url}
-                        alt=""
-                    />
+                <div className="flex items-start">
+                    <div className=" flex h-9 w-9 overflow-hidden rounded-full">
+                        <img
+                            className="h-full w-full object-cover"
+                            src={video?.author?.avatar[0]?.url}
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div className="flex flex-col ml-3 overflow-hidden">
                     <div>
-                        <span className="text-sm font-bold line-clamp-2 w-[70%]  overflow-hidden ">
+                        <span className="text-sm font-bold line-clamp-2 overflow-hidden ">
                             {video?.title}
                         </span>
                         <span className="flex text-[12px] items-center font-semibold mt-2 text-white/[0.7]">
