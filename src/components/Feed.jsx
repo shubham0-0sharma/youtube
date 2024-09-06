@@ -7,7 +7,7 @@ const Feed = () => {
     useEffect(() => {
         document.getElementById("root").classList.remove("custom-h");
     }, []);
-    console.log(searchResults);
+    // console.log(searchResults);
     return (
         <div className="flex h-[calc(100%-64px)] ">
             <LeftNav />

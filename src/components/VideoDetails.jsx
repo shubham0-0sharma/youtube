@@ -10,6 +10,7 @@ import { SuggestionVideoCard } from "../components/index";
 
 const VideoDetails = () => {
     const [video, setVideo] = useState();
+
     const { setLoading } = useContext(Context);
     const [relatedVideos, setRelatedVideos] = useState([]);
     const { id } = useParams();
@@ -62,6 +63,7 @@ const VideoDetails = () => {
                                     <img
                                         className="h-full w-full object-cover"
                                         src={video?.author?.avatar[0]?.url}
+                                        alt="Content Creater Profile"
                                     />
                                 </div>
                             </div>
@@ -70,8 +72,8 @@ const VideoDetails = () => {
                                     {video?.author?.title}
                                     {video?.author?.badges[0]?.type ===
                                         "VERIFIED_CHANNEL" && (
-                                        <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
-                                    )}
+                                            <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
+                                        )}
                                 </div>
                                 <div className="text-white/[0.7] text-sm">
                                     {video?.author?.stats?.subscribersText}
@@ -82,17 +84,20 @@ const VideoDetails = () => {
                             <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15]">
                                 <AiOutlineLike className="text-xl text-white mr-2" />
                                 {`${abbreviateNumber(
-                                    video?.stats?.views,
+                                    (video?.stats?.views || 0),
                                     0
                                 )} Like`}
                             </div>
                             <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15] ml-4">
                                 {`${abbreviateNumber(
-                                    video?.stats?.views,
+                                    (video?.stats?.views || 0),
                                     0
                                 )} Views`}
                             </div>
                         </div>
+                    </div>
+                    <div className="text-white mt-4 h-30 overflow-hidden">
+                        {video?.description?.slice(0, 240)}...
                     </div>
                 </div>
 
